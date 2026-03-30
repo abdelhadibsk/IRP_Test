@@ -2016,12 +2016,6 @@ DBG_RAW("entervTaskStartScheduler\r\n");
 	    DBG_RAW("calling vApplicationGetIdleTaskMemory\r\n");
 		vApplicationGetIdleTaskMemory( &pxIdleTaskTCBBuffer, &pxIdleTaskStackBuffer, &ulIdleTaskStackSize );
 	    DBG_RAW("idle memory ok\r\n");
-	    char _tmp[64];
-	    snprintf(_tmp, sizeof(_tmp), "stack=%p tcb=%p size=%lu\r\n",
-	        (void*)pxIdleTaskStackBuffer,
-	        (void*)pxIdleTaskTCBBuffer,
-	        (unsigned long)ulIdleTaskStackSize);
-	    DBG_RAW(_tmp);
 
 		xIdleTaskHandle = xTaskCreateStatic(	prvIdleTask,
 												configIDLE_TASK_NAME,

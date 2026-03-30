@@ -5,7 +5,6 @@
   #include <stdint.h>
   #include <string.h>
   #include <stdio.h>
-#include "usart.h"
   extern uint32_t SystemCoreClock;
   void xPortSysTickHandler(void);
 #endif
@@ -78,8 +77,8 @@
 #define configASSERT( x ) \
     if( ( x ) == 0 ) { \
         extern UART_HandleTypeDef huart2; \
-        char _a[128]; \
-        snprintf(_a, sizeof(_a), "ASSERT %d\r\n", __LINE__); \
+        char _a[64]; \
+        snprintf(_a, sizeof(_a), "ASSERT FAIL %s:%d\r\n", __FILE__, __LINE__); \
         HAL_UART_Transmit(&huart2, (uint8_t*)_a, strlen(_a), 1000); \
         taskDISABLE_INTERRUPTS(); \
         for( ;; ); \

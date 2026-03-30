@@ -2013,16 +2013,8 @@ DBG_RAW("entervTaskStartScheduler\r\n");
 
 		/* The Idle task is created using user provided RAM - obtain the
 		address of the RAM then create the idle task. */
-	    DBG_RAW("calling vApplicationGetIdleTaskMemory\r\n");
-		vApplicationGetIdleTaskMemory( &pxIdleTaskTCBBuffer, &pxIdleTaskStackBuffer, &ulIdleTaskStackSize );
-	    DBG_RAW("idle memory ok\r\n");
-	    char _tmp[64];
-	    snprintf(_tmp, sizeof(_tmp), "stack=%p tcb=%p size=%lu\r\n",
-	        (void*)pxIdleTaskStackBuffer,
-	        (void*)pxIdleTaskTCBBuffer,
-	        (unsigned long)ulIdleTaskStackSize);
-	    DBG_RAW(_tmp);
 
+		vApplicationGetIdleTaskMemory( &pxIdleTaskTCBBuffer, &pxIdleTaskStackBuffer, &ulIdleTaskStackSize );
 		xIdleTaskHandle = xTaskCreateStatic(	prvIdleTask,
 												configIDLE_TASK_NAME,
 												ulIdleTaskStackSize,
@@ -2030,17 +2022,13 @@ DBG_RAW("entervTaskStartScheduler\r\n");
 												portPRIVILEGE_BIT, /* In effect ( tskIDLE_PRIORITY | portPRIVILEGE_BIT ), but tskIDLE_PRIORITY is zero. */
 												pxIdleTaskStackBuffer,
 												pxIdleTaskTCBBuffer ); /*lint !e961 MISRA exception, justified as it is not a redundant explicit cast to all supported compilers. */
-	    DBG_RAW("xTaskCreateStatic done\r\n");
 
 		if( xIdleTaskHandle != NULL )
 		{
 			xReturn = pdPASS;
-	        DBG_RAW("idle task created OK\r\n");
-
 		}
 		else
 		{
-	        DBG_RAW("idle task FAILED\r\n");
 			xReturn = pdFAIL;
 		}
 	}
