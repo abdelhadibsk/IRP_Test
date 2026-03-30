@@ -157,7 +157,6 @@ int main(void)
   #endif
 
   //fflush( stdout );
-  HAL_SuspendTick();
 
   DBG_PRINT( "Starting scheduler\n" );
   vTaskStartScheduler();

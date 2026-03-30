@@ -19,3 +19,45 @@ arm-none-eabi-size  TEST_FREERTOS.elf
   26704	     96	  25088	  51888	   cab0	TEST_FREERTOS.elf
 Finished building: default.size.stdout
  
+01:35:50 **** Incremental Build of configuration Debug for project TEST_FREERTOS ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "TEST_FREERTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\bensi\STM32CubeIDE\workspace_1.15.0\Partie IRP\TEST_FREERTOS\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TEST_FREERTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TEST_FREERTOS.elf
+ 
+arm-none-eabi-size  TEST_FREERTOS.elf 
+arm-none-eabi-objdump -h -S TEST_FREERTOS.elf  > "TEST_FREERTOS.list"
+   text	   data	    bss	    dec	    hex	filename
+  26752	     96	  25088	  51936	   cae0	TEST_FREERTOS.elf
+Finished building: default.size.stdout
+ 
+Finished building: TEST_FREERTOS.list
+ 
+01:43:05 **** Incremental Build of configuration Debug for project TEST_FREERTOS ****
+make -j8 all 
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o"
+arm-none-eabi-gcc -o "TEST_FREERTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\bensi\STM32CubeIDE\workspace_1.15.0\Partie IRP\TEST_FREERTOS\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TEST_FREERTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TEST_FREERTOS.elf
+ 
+arm-none-eabi-size  TEST_FREERTOS.elf 
+arm-none-eabi-objdump -h -S TEST_FREERTOS.elf  > "TEST_FREERTOS.list"
+   text	   data	    bss	    dec	    hex	filename
+  26592	     96	  25088	  51776	   ca40	TEST_FREERTOS.elf
+Finished building: default.size.stdout
+ 
+Finished building: TEST_FREERTOS.list
+ 
+01:43:54 **** Incremental Build of configuration Debug for project TEST_FREERTOS ****
+make -j8 all 
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o"
+arm-none-eabi-gcc -o "TEST_FREERTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\bensi\STM32CubeIDE\workspace_1.15.0\Partie IRP\TEST_FREERTOS\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TEST_FREERTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TEST_FREERTOS.elf
+ 
+arm-none-eabi-size  TEST_FREERTOS.elf 
+arm-none-eabi-objdump -h -S TEST_FREERTOS.elf  > "TEST_FREERTOS.list"
+   text	   data	    bss	    dec	    hex	filename
+  26512	     96	  25088	  51696	   c9f0	TEST_FREERTOS.elf
+Finished building: default.size.stdout
+ 
+Finished building: TEST_FREERTOS.list
+ 
