@@ -1,0 +1,13 @@
+../Core/Src/main.c:84:5:main	176	static
+../Core/Src/main.c:214:6:SystemClock_Config	96	static
+../Core/Src/main.c:264:13:MX_USART2_UART_Init	8	static
+../Core/Src/main.c:299:13:MX_GPIO_Init	48	static
+../Core/Src/main.c:344:6:periodic_task	184	static
+../Core/Src/main.c:388:6:vApplicationStackOverflowHook	152	static,ignoring_inline_asm
+../Core/Src/main.c:405:6:MyTaskSwitchedIn	160	static
+../Core/Src/main.c:414:6:MyTaskSwitchedOut	160	static
+../Core/Src/main.c:441:6:show_specific_task_states	184	static
+../Core/Src/main.c:471:6:vApplicationTickHook	136	static
+../Core/Src/main.c:496:6:StartDefaultTask	16	static
+../Core/Src/main.c:515:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/main.c:532:6:Error_Handler	4	static,ignoring_inline_asm

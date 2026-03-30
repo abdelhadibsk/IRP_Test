@@ -1,0 +1,13 @@
+../Core/Src/main.c:84:5:main	2
+../Core/Src/main.c:214:6:SystemClock_Config	4
+../Core/Src/main.c:264:13:MX_USART2_UART_Init	2
+../Core/Src/main.c:299:13:MX_GPIO_Init	1
+../Core/Src/main.c:344:6:periodic_task	3
+../Core/Src/main.c:388:6:vApplicationStackOverflowHook	1
+../Core/Src/main.c:405:6:MyTaskSwitchedIn	1
+../Core/Src/main.c:414:6:MyTaskSwitchedOut	1
+../Core/Src/main.c:441:6:show_specific_task_states	8
+../Core/Src/main.c:471:6:vApplicationTickHook	3
+../Core/Src/main.c:496:6:StartDefaultTask	1
+../Core/Src/main.c:515:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:532:6:Error_Handler	1

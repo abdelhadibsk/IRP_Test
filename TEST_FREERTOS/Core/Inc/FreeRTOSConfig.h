@@ -83,10 +83,10 @@
 #define configMAX_TASK_NAME_LEN                  ( 16 )
 #define configUSE_TRACE_FACILITY                 1
 #define configUSE_16_BIT_TICKS                   0
-#define configUSE_MUTEXES                        1
+#define configUSE_MUTEXES                        0
 #define configQUEUE_REGISTRY_SIZE                8
-#define configUSE_RECURSIVE_MUTEXES              1
-#define configUSE_COUNTING_SEMAPHORES            1
+#define configUSE_RECURSIVE_MUTEXES              0
+//#define configUSE_COUNTING_SEMAPHORES            0
 #define configUSE_PORT_OPTIMISED_TASK_SELECTION  0
 
 #define configCHECK_FOR_STACK_OVERFLOW  2
@@ -119,7 +119,7 @@
 #define configUSE_OS2_EVENTFLAGS_FROM_ISR    1
 #define configUSE_OS2_THREAD_FLAGS           1
 #define configUSE_OS2_TIMER                  1
-#define configUSE_OS2_MUTEX                  1
+#define configUSE_OS2_MUTEX                  0
 
 /* Set the following definitions to 1 to include the API function, or zero
 to exclude the API function. */
@@ -137,6 +137,9 @@ to exclude the API function. */
 #define INCLUDE_xTaskGetCurrentTaskHandle    1
 #define INCLUDE_eTaskGetState                1
 #define INCLUDE_xTaskGetHandle               1
+
+#define configUSE_COUNTING_SEMAPHORES 1
+#define INCLUDE_xSemaphoreGetMutexHolder 1
 
 /*
  * The CMSIS-RTOS V2 FreeRTOS wrapper is dependent on the heap implementation used

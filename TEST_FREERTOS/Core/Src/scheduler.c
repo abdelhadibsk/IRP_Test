@@ -69,7 +69,7 @@ void vApplicationSchedulerTickHook( void )
     TickType_t  xNow = xTaskGetTickCountFromISR();
     UBaseType_t n = uxRTGetTaskCount();
 
-    // printf("TickHook: xNow=%lu n=%lu\n", (unsigned long)xNow, (unsigned long)n);
+    // DBG_PRINT("TickHook: xNow=%lu n=%lu\n", (unsigned long)xNow, (unsigned long)n);
 
     for( i = 0; i < n; i++ )
     {
@@ -77,7 +77,7 @@ void vApplicationSchedulerTickHook( void )
         TickType_t next_release = xRTGetNextRelease( xTask );
         eTaskState state = eTaskGetState( xTask );
 
-        // printf("  Task %s: next_release=%lu state=%d\n",
+        // DBG_PRINT("  Task %s: next_release=%lu state=%d\n",
         //        pcTaskGetName(xTask),
         //        (unsigned long)next_release,
         //        (int)state);
@@ -89,7 +89,7 @@ void vApplicationSchedulerTickHook( void )
             if( state == eSuspended )
             {
                 BaseType_t r = xTaskResumeFromISR( xTask );
-                // printf("  xTaskResumeFromISR returned %ld\n", (long)r);
+                // DBG_PRINT("  xTaskResumeFromISR returned %ld\n", (long)r);
             }
         }
     }
@@ -101,7 +101,7 @@ void vApplicationSchedulerTickHook( void )
  * ========================================================= */
 void vApplicationSchedulerUpdatePriorities( void )
 {
-    // printf( "[PRIORITY UPDATE] Tick=%lu\n", ( unsigned long ) xTaskGetTickCount() );
+    // DBG_PRINT( "[PRIORITY UPDATE] Tick=%lu\n", ( unsigned long ) xTaskGetTickCount() );
 #if   ( configUSE_RM   == 1 )
     vRM_UpdatePriorities();
 #elif ( configUSE_DM   == 1 )

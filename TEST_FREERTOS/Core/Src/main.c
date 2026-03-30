@@ -171,11 +171,11 @@ int main(void)
                      &tC );
 
       /* Print registered task info using helper API */
-  printf( "Tasks created and registered:\n" );
+  DBG_PRINT( "Tasks created and registered:\n" );
   for( UBaseType_t i = 0; i < uxRTGetTaskCount(); i++ )
   {
 	  TaskHandle_t h = xRTGetTaskByIndex( i );
-	  printf( "  Task %s: period=%lu  deadline=%lu  execution_time=%lu\n",
+	  DBG_PRINT( "  Task %s: period=%lu  deadline=%lu  execution_time=%lu\n",
       pcTaskGetName( h ),
       ( unsigned long ) xRTGetTaskPeriod( h ),
       ( unsigned long ) xRTGetTaskDeadline( h ),
@@ -184,18 +184,18 @@ int main(void)
 
       /* Active policy shown at startup */
 	#if   ( configUSE_RM   == 1 )
-  printf( "Policy: Rate Monotonic (RM)\n" );
+  DBG_PRINT( "Policy: Rate Monotonic (RM)\n" );
 	#elif ( configUSE_DM   == 1 )
-  printf( "Policy: Deadline Monotonic (DM)\n" );
+  DBG_PRINT( "Policy: Deadline Monotonic (DM)\n" );
 	#elif ( configUSE_FIFO == 1 )
-  printf( "Policy: FIFO\n" );
+  DBG_PRINT( "Policy: FIFO\n" );
 	#elif ( configUSE_EDF  == 1 )
-  printf( "Policy: Earliest Deadline First (EDF)\n" );
+  DBG_PRINT( "Policy: Earliest Deadline First (EDF)\n" );
   #endif
 
-  fflush( stdout );
+  //fflush( stdout );
 
-  printf( "Starting scheduler\n" );
+  DBG_PRINT( "Starting scheduler\n" );
   vTaskStartScheduler();
 
   while (1)
@@ -352,7 +352,7 @@ void periodic_task( void *pvParameters )
         TickType_t   elapsed = 0;
         TickType_t   slice_start;
 
-        printf( "[START] %s  tick=%lu  execution_time = %lu\n",
+        DBG_PRINT( "[START] %s  tick=%lu  execution_time = %lu\n",
                 pcTaskGetName( self ),
                 ( unsigned long ) xTaskGetTickCount(),
                 ( unsigned long ) execution_time );
@@ -373,7 +373,7 @@ void periodic_task( void *pvParameters )
         }
 
         TickType_t finish = xTaskGetTickCount();
-        printf( "[END  ] %s  tick=%lu  exec=%lu\n",
+        DBG_PRINT( "[END  ] %s  tick=%lu  exec=%lu\n",
                 pcTaskGetName( self ),
                 ( unsigned long ) finish,
                 ( unsigned long ) elapsed );
@@ -388,7 +388,7 @@ void periodic_task( void *pvParameters )
 void vApplicationStackOverflowHook( TaskHandle_t xTask, char *pcTaskName )
 {
     ( void ) xTask;
-    printf( "STACK OVERFLOW: %s\n", pcTaskName );
+    DBG_PRINT( "STACK OVERFLOW: %s\n", pcTaskName );
     taskDISABLE_INTERRUPTS();
     for( ;; );
 }
@@ -405,15 +405,16 @@ void vApplicationStackOverflowHook( TaskHandle_t xTask, char *pcTaskName )
 void MyTaskSwitchedIn( void )
 {
     TaskHandle_t h = xTaskGetCurrentTaskHandle();
-    printf( "[IN ] %s at %lu\n",
+    DBG_PRINT( "[IN ] %s at %lu\n",
             pcTaskGetName( h ),
             ( unsigned long ) xTaskGetTickCount() );
+
 }
 
 void MyTaskSwitchedOut( void )
 {
     TaskHandle_t h = xTaskGetCurrentTaskHandle();
-    printf( "[OUT] %s at %lu\n",
+    DBG_PRINT( "[OUT] %s at %lu\n",
             pcTaskGetName( h ),
             ( unsigned long ) xTaskGetTickCount() );
 }
@@ -432,7 +433,7 @@ void vApplicationTickHook( void )
 
     if( ( tickCount % 100 ) == 0 )
     {
-        printf( "[TICK] %lu\n", ( unsigned long ) tickCount );
+        DBG_PRINT( "[TICK] %lu\n", ( unsigned long ) tickCount );
     }
 }
 */
@@ -442,7 +443,7 @@ void show_specific_task_states(void)
     TaskHandle_t tasks[] = {tA, tB, tC};
     const char* names[] = {"A", "B", "C"};
 
-    printf("\n--- Specific Task States ---\n");
+    DBG_PRINT("\n--- Specific Task States ---\n");
     for(int i = 0; i < 3; i++)
     {
         if(tasks[i] != NULL)
@@ -460,10 +461,10 @@ void show_specific_task_states(void)
                 default:         state_str = "Unknown"; break;
             }
 
-            printf("Task %s: %s\n", names[i], state_str);
+            DBG_PRINT("Task %s: %s\n", names[i], state_str);
         }
     }
-    printf("----------------------------\n");
+    DBG_PRINT("----------------------------\n");
 }
 
 // And update the tick hook to use the simpler version:
@@ -474,7 +475,7 @@ void vApplicationTickHook(void)
 
     if ((tickCount % 10) == 0)
     {
-        printf("[TICK] %lu ticks elapsed\n", (unsigned long)tickCount);
+    	DBG_PRINT("[TICK] %lu ticks elapsed\n", (unsigned long)tickCount);
 
         if ((tickCount % 50) == 0)
         {

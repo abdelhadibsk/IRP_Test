@@ -2900,7 +2900,7 @@ BaseType_t xSwitchRequired = pdFALSE;
         #endif
 
 	}
-	// printf("xTaskIncrementTick: xSwitchRequired=%ld xYieldPending=%ld\n",
+	// DBG_PRINT("xTaskIncrementTick: xSwitchRequired=%ld xYieldPending=%ld\n",
     //    (long)xSwitchRequired, (long)xYieldPending);
 
 	return xSwitchRequired;

@@ -75,7 +75,6 @@ void vApplicationRTTaskRegister(
 );
 
 void vApplicationSchedulerTickHook( void );
-
 void vApplicationSchedulerUpdatePriorities( void );
 
 /* =========================================================
