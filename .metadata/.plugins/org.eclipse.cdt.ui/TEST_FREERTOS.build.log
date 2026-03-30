@@ -1,10 +1,10 @@
-01:14:28 **** Incremental Build of configuration Debug for project TEST_FREERTOS ****
+01:32:11 **** Incremental Build of configuration Debug for project TEST_FREERTOS ****
 make -j8 all 
 arm-none-eabi-size  TEST_FREERTOS.elf 
    text	   data	    bss	    dec	    hex	filename
-  26688	     96	  25064	  51848	   ca88	TEST_FREERTOS.elf
+  26704	     96	  25088	  51888	   cab0	TEST_FREERTOS.elf
 Finished building: default.size.stdout
  
 
-01:14:28 Build Finished. 0 errors, 0 warnings. (took 460ms)
+01:32:12 Build Finished. 0 errors, 0 warnings. (took 479ms)
 

@@ -1157,10 +1157,6 @@ typedef struct xSTATIC_TCB
 	#if ( configUSE_POSIX_ERRNO == 1 )
 		int				iDummy22;
 	#endif
-	    /* RT scheduler extension — must match RT_Params_t in scheduler.h */
-	    #if ( configUSE_SCHEDULER == 1 )
-	        uint32_t xDummyRT[ 6 ];
-	    #endif
 } StaticTask_t;
 
 /*

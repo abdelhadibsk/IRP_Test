@@ -5511,19 +5511,18 @@ void vApplicationRTTaskRegister(
     configASSERT( pxTCB != NULL );
     configASSERT( uxRTTaskCount < configMAX_RT_TASKS );
 
-    /* Use portDISABLE/ENABLE instead of taskENTER_CRITICAL
-       because this may be called before scheduler starts */
-    portDISABLE_INTERRUPTS();
+    taskENTER_CRITICAL();
 
     pxRTTaskList[ uxRTTaskCount++ ] = pxTCB;
 
     pxTCB->xRT.period            = period;
     pxTCB->xRT.deadline          = deadline;
     pxTCB->xRT.execution_time    = execution_time;
-    pxTCB->xRT.next_release      = 0;
+    pxTCB->xRT.next_release      = xTaskGetTickCount();
     pxTCB->xRT.absolute_deadline = 0;
     pxTCB->xRT.release_order     = 0;
 
-    portENABLE_INTERRUPTS();
+    taskEXIT_CRITICAL();
 }
+
 #endif /* configUSE_RT_SCHEDULER */

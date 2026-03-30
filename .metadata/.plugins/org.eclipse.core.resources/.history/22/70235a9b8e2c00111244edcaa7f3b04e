@@ -228,12 +228,13 @@ void vApplicationGetIdleTaskMemory( StaticTask_t **ppxIdleTaskTCBBuffer,
                                     uint32_t      *pulIdleTaskStackSize )
 {
     static StaticTask_t xIdleTaskTCB;
-    static StackType_t  uxIdleTaskStack[ configMINIMAL_STACK_SIZE ] __attribute__((aligned(8)));
+    static StackType_t  uxIdleTaskStack[ configMINIMAL_STACK_SIZE ];
 
-    *ppxIdleTaskTCBBuffer   = &xIdleTaskTCB;
+    *ppxIdleTaskTCBBuffer  = &xIdleTaskTCB;
     *ppxIdleTaskStackBuffer = uxIdleTaskStack;
     *pulIdleTaskStackSize   = configMINIMAL_STACK_SIZE;
-}/* =========================================================
+}
+/* =========================================================
  * PERIODIC TASK
  *
  * No parameters passed — everything is read directly from
