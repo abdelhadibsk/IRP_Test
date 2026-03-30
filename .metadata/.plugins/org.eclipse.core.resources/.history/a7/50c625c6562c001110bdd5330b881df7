@@ -405,15 +405,6 @@ void vApplicationStackOverflowHook( TaskHandle_t xTask, char *pcTaskName )
 void MyTaskSwitchedIn( void )
 {
     TaskHandle_t h = xTaskGetCurrentTaskHandle();
-    //we want to SET ON the LED here to visualize the scheduling,
-    // if task A is running, SET GPIO PB5
-    // if task B is running, SET GPIO PB6
-        if (pcTaskGetName(h)[0] == 'A') {
-            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_SET);
-        } else if (pcTaskGetName(h)[0] == 'B') {
-            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
-        }
-
     DBG_PRINT( "[IN ] %s at %lu\n",
             pcTaskGetName( h ),
             ( unsigned long ) xTaskGetTickCount() );
@@ -423,15 +414,6 @@ void MyTaskSwitchedIn( void )
 void MyTaskSwitchedOut( void )
 {
     TaskHandle_t h = xTaskGetCurrentTaskHandle();
-    //we want to SET OFF the LED here to visualize the scheduling,
-    // if task A is switched out, SET OFF GPIO PB5
-    // if task B is switched out, SET OFF GPIO PB6
-        if (pcTaskGetName(h)[0] == 'A') {
-            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_RESET);
-        } else if (pcTaskGetName(h)[0] == 'B') {
-            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
-        }
-
     DBG_PRINT( "[OUT] %s at %lu\n",
             pcTaskGetName( h ),
             ( unsigned long ) xTaskGetTickCount() );
@@ -573,4 +555,4 @@ void assert_failed(uint8_t *file, uint32_t line)
      ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
   /* USER CODE END 6 */
 }
-#endif /* USE_FULL_ASSERT */
+#endif /* USE_FULL_ASSERT */s
