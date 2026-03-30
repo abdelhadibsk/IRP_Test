@@ -39,10 +39,17 @@ task.h is included from an application file. */
 #include "task.h"
 #include "timers.h"
 #include "stack_macros.h"
+#include "usart.h"
 
 #if ( configUSE_SCHEDULER == 1 )
     #include "scheduler.h"
+	#include "DBG.h"
 #endif
+
+// Temporary non-blocking transmit for debug inside disabled-interrupt zone
+static inline void DBG_RAW(const char *s) {
+    HAL_UART_Transmit(&huart2, (uint8_t*)s, strlen(s), 1000);
+}
 
 /* Lint e9021, e961 and e750 are suppressed as a MISRA exception justified
 because the MPU ports require MPU_WRAPPERS_INCLUDED_FROM_API_FILE to be defined
@@ -1995,6 +2002,7 @@ static void prvAddNewTaskToReadyList( TCB_t *pxNewTCB )
 void vTaskStartScheduler( void )
 {
 BaseType_t xReturn;
+DBG_RAW("entervTaskStartScheduler\r\n");
 
 	/* Add the idle task at the lowest priority. */
 	#if( configSUPPORT_STATIC_ALLOCATION == 1 )
@@ -2065,6 +2073,8 @@ BaseType_t xReturn;
 		so interrupts will automatically get re-enabled when the first task
 		starts to run. */
 		portDISABLE_INTERRUPTS();
+		DBG_RAW("A\r\n");  // add this
+
 
 		#if ( configUSE_NEWLIB_REENTRANT == 1 )
 		{
@@ -2079,6 +2089,8 @@ BaseType_t xReturn;
 		xNextTaskUnblockTime = portMAX_DELAY;
 		xSchedulerRunning = pdTRUE;
 		xTickCount = ( TickType_t ) configINITIAL_TICK_COUNT;
+		DBG_RAW("B\r\n");  // add this
+
 
 		/* If configGENERATE_RUN_TIME_STATS is defined then the following
 		macro must be defined to configure the timer/counter used to generate
@@ -2087,11 +2099,15 @@ BaseType_t xReturn;
 		have portCONFIGURE_TIMER_FOR_RUN_TIME_STATS() defined in your
 		FreeRTOSConfig.h file. */
 		portCONFIGURE_TIMER_FOR_RUN_TIME_STATS();
+		DBG_RAW("C\r\n");  // add this
 
-		traceTASK_SWITCHED_IN();
+
+		//traceTASK_SWITCHED_IN();
 
 		/* Setting up the timer tick is hardware specific and thus in the
 		portable interface. */
+		DBG_RAW("about to call xPortStartScheduler\r\n");
+
 		if( xPortStartScheduler() != pdFALSE )
 		{
 			/* Should not reach here as if the scheduler is running the

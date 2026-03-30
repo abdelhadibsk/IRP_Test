@@ -31,7 +31,8 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+void MyTaskSwitchedIn(void);
+void MyTaskSwitchedOut(void);
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
