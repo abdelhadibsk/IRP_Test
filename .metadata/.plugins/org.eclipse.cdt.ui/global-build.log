@@ -1,224 +1,23 @@
-18:01:28 **** Incremental Build of configuration Debug for project TEST_FREERTOS ****
+18:09:22 **** Incremental Build of configuration Debug for project TEST_FREERTOS ****
 make -j8 all 
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/croutine.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/croutine.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/croutine.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/croutine.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/event_groups.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/event_groups.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/event_groups.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/list.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/list.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/list.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/list.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/queue.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/queue.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/queue.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/queue.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.o"
 arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/tasks.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/tasks.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/tasks.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/tasks.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/timers.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/timers.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/timers.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/timers.o"
+arm-none-eabi-gcc "../Core/Src/Policies.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Policies.d" -MT"Core/Src/Policies.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Policies.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc "../Core/Src/scheduler.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Src" -I"C:/Users/bensi/STM32CubeIDE/workspace_1.15.0/Partie IRP/TEST_FREERTOS/Core/Inc" -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/scheduler.d" -MT"Core/Src/scheduler.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/scheduler.o"
-In file included from ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:56,
-                 from ../Core/Src/scheduler.c:10:
-../Core/Inc/FreeRTOSConfig.h:141: warning: "configUSE_COUNTING_SEMAPHORES" redefined
-  141 | #define configUSE_COUNTING_SEMAPHORES 1
-      | 
-../Core/Inc/FreeRTOSConfig.h:89: note: this is the location of the previous definition
-   89 | #define configUSE_COUNTING_SEMAPHORES            0
-      | 
-In file included from ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:56,
-                 from ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:38:
-../Core/Inc/FreeRTOSConfig.h:141: warning: "configUSE_COUNTING_SEMAPHORES" redefined
-  141 | #define configUSE_COUNTING_SEMAPHORES 1
-      | 
-../Core/Inc/FreeRTOSConfig.h:89: note: this is the location of the previous definition
-   89 | #define configUSE_COUNTING_SEMAPHORES            0
-      | 
 ../Core/Src/scheduler.c: In function 'vApplicationSchedulerTickHook':
 ../Core/Src/scheduler.c:91:28: warning: unused variable 'r' [-Wunused-variable]
    91 |                 BaseType_t r = xTaskResumeFromISR( xTask );
       |                            ^
-../Middlewares/Third_Party/FreeRTOS/Source/tasks.c: In function 'vTaskStartScheduler':
-../Core/Inc/FreeRTOSConfig.h:94:35: warning: implicit declaration of function 'MyTaskSwitchedIn' [-Wimplicit-function-declaration]
-   94 | #define traceTASK_SWITCHED_IN()   MyTaskSwitchedIn()
-      |                                   ^~~~~~~~~~~~~~~~
-../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:2091:17: note: in expansion of macro 'traceTASK_SWITCHED_IN'
- 2091 |                 traceTASK_SWITCHED_IN();
-      |                 ^~~~~~~~~~~~~~~~~~~~~
-../Middlewares/Third_Party/FreeRTOS/Source/tasks.c: In function 'vTaskSwitchContext':
-../Core/Inc/FreeRTOSConfig.h:95:35: warning: implicit declaration of function 'MyTaskSwitchedOut' [-Wimplicit-function-declaration]
-   95 | #define traceTASK_SWITCHED_OUT()  MyTaskSwitchedOut()
-      |                                   ^~~~~~~~~~~~~~~~~
-../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:3031:17: note: in expansion of macro 'traceTASK_SWITCHED_OUT'
- 3031 |                 traceTASK_SWITCHED_OUT();
-      |                 ^~~~~~~~~~~~~~~~~~~~~~
-In file included from ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:56,
-                 from ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:126,
-                 from ../Core/Src/main.c:21:
-../Core/Inc/FreeRTOSConfig.h:141: warning: "configUSE_COUNTING_SEMAPHORES" redefined
-  141 | #define configUSE_COUNTING_SEMAPHORES 1
-      | 
-../Core/Inc/FreeRTOSConfig.h:89: note: this is the location of the previous definition
-   89 | #define configUSE_COUNTING_SEMAPHORES            0
-      | 
-../Core/Src/main.c: In function 'main':
-../Core/Inc/FreeRTOSConfig.h:196:37: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:174:3: note: in expansion of macro 'DBG_PRINT'
-  174 |   DBG_PRINT( "Tasks created and registered:\n" );
-      |   ^~~~~~~~~
-../Core/Src/main.c:29:1: note: include '<string.h>' or provide a declaration of 'strlen'
-   28 | #include <stdio.h>
-  +++ |+#include <string.h>
-   29 | /* USER CODE END Includes */
-../Core/Inc/FreeRTOSConfig.h:196:37: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:174:3: note: in expansion of macro 'DBG_PRINT'
-  174 |   DBG_PRINT( "Tasks created and registered:\n" );
-      |   ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: note: include '<string.h>' or provide a declaration of 'strlen'
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:174:3: note: in expansion of macro 'DBG_PRINT'
-  174 |   DBG_PRINT( "Tasks created and registered:\n" );
-      |   ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:178:11: note: in expansion of macro 'DBG_PRINT'
-  178 |           DBG_PRINT( "  Task %s: period=%lu  deadline=%lu  execution_time=%lu\n",
-      |           ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: note: include '<string.h>' or provide a declaration of 'strlen'
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:178:11: note: in expansion of macro 'DBG_PRINT'
-  178 |           DBG_PRINT( "  Task %s: period=%lu  deadline=%lu  execution_time=%lu\n",
-      |           ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:193:3: note: in expansion of macro 'DBG_PRINT'
-  193 |   DBG_PRINT( "Policy: Earliest Deadline First (EDF)\n" );
-      |   ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: note: include '<string.h>' or provide a declaration of 'strlen'
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:193:3: note: in expansion of macro 'DBG_PRINT'
-  193 |   DBG_PRINT( "Policy: Earliest Deadline First (EDF)\n" );
-      |   ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:198:3: note: in expansion of macro 'DBG_PRINT'
-  198 |   DBG_PRINT( "Starting scheduler\n" );
-      |   ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: note: include '<string.h>' or provide a declaration of 'strlen'
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:198:3: note: in expansion of macro 'DBG_PRINT'
-  198 |   DBG_PRINT( "Starting scheduler\n" );
-      |   ^~~~~~~~~
-../Core/Src/main.c: In function 'periodic_task':
-../Core/Inc/FreeRTOSConfig.h:196:37: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:355:9: note: in expansion of macro 'DBG_PRINT'
-  355 |         DBG_PRINT( "[START] %s  tick=%lu  execution_time = %lu\n",
-      |         ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: note: include '<string.h>' or provide a declaration of 'strlen'
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:355:9: note: in expansion of macro 'DBG_PRINT'
-  355 |         DBG_PRINT( "[START] %s  tick=%lu  execution_time = %lu\n",
-      |         ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:376:9: note: in expansion of macro 'DBG_PRINT'
-  376 |         DBG_PRINT( "[END  ] %s  tick=%lu  exec=%lu\n",
-      |         ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: note: include '<string.h>' or provide a declaration of 'strlen'
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:376:9: note: in expansion of macro 'DBG_PRINT'
-  376 |         DBG_PRINT( "[END  ] %s  tick=%lu  exec=%lu\n",
-      |         ^~~~~~~~~
-../Core/Src/main.c: In function 'vApplicationStackOverflowHook':
-../Core/Inc/FreeRTOSConfig.h:196:37: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:391:5: note: in expansion of macro 'DBG_PRINT'
-  391 |     DBG_PRINT( "STACK OVERFLOW: %s\n", pcTaskName );
-      |     ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: note: include '<string.h>' or provide a declaration of 'strlen'
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:391:5: note: in expansion of macro 'DBG_PRINT'
-  391 |     DBG_PRINT( "STACK OVERFLOW: %s\n", pcTaskName );
-      |     ^~~~~~~~~
-../Core/Src/main.c: In function 'MyTaskSwitchedIn':
-../Core/Inc/FreeRTOSConfig.h:196:37: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:408:5: note: in expansion of macro 'DBG_PRINT'
-  408 |     DBG_PRINT( "[IN ] %s at %lu\n",
-      |     ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: note: include '<string.h>' or provide a declaration of 'strlen'
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:408:5: note: in expansion of macro 'DBG_PRINT'
-  408 |     DBG_PRINT( "[IN ] %s at %lu\n",
-      |     ^~~~~~~~~
-../Core/Src/main.c: In function 'MyTaskSwitchedOut':
-../Core/Inc/FreeRTOSConfig.h:196:37: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:417:5: note: in expansion of macro 'DBG_PRINT'
-  417 |     DBG_PRINT( "[OUT] %s at %lu\n",
-      |     ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: note: include '<string.h>' or provide a declaration of 'strlen'
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:417:5: note: in expansion of macro 'DBG_PRINT'
-  417 |     DBG_PRINT( "[OUT] %s at %lu\n",
-      |     ^~~~~~~~~
-../Core/Src/main.c: In function 'show_specific_task_states':
-../Core/Inc/FreeRTOSConfig.h:196:37: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:446:5: note: in expansion of macro 'DBG_PRINT'
-  446 |     DBG_PRINT("\n--- Specific Task States ---\n");
-      |     ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: note: include '<string.h>' or provide a declaration of 'strlen'
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:446:5: note: in expansion of macro 'DBG_PRINT'
-  446 |     DBG_PRINT("\n--- Specific Task States ---\n");
-      |     ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:464:13: note: in expansion of macro 'DBG_PRINT'
-  464 |             DBG_PRINT("Task %s: %s\n", names[i], state_str);
-      |             ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: note: include '<string.h>' or provide a declaration of 'strlen'
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:464:13: note: in expansion of macro 'DBG_PRINT'
-  464 |             DBG_PRINT("Task %s: %s\n", names[i], state_str);
-      |             ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:467:5: note: in expansion of macro 'DBG_PRINT'
-  467 |     DBG_PRINT("----------------------------\n");
-      |     ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: note: include '<string.h>' or provide a declaration of 'strlen'
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:467:5: note: in expansion of macro 'DBG_PRINT'
-  467 |     DBG_PRINT("----------------------------\n");
-      |     ^~~~~~~~~
-../Core/Src/main.c: In function 'vApplicationTickHook':
-../Core/Inc/FreeRTOSConfig.h:196:37: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:478:9: note: in expansion of macro 'DBG_PRINT'
-  478 |         DBG_PRINT("[TICK] %lu ticks elapsed\n", (unsigned long)tickCount);
-      |         ^~~~~~~~~
-../Core/Inc/FreeRTOSConfig.h:196:37: note: include '<string.h>' or provide a declaration of 'strlen'
-  196 |                           (uint16_t)strlen(_buf),              \
-      |                                     ^~~~~~
-../Core/Src/main.c:478:9: note: in expansion of macro 'DBG_PRINT'
-  478 |         DBG_PRINT("[TICK] %lu ticks elapsed\n", (unsigned long)tickCount);
-      |         ^~~~~~~~~
 arm-none-eabi-gcc -o "TEST_FREERTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\bensi\STM32CubeIDE\workspace_1.15.0\Partie IRP\TEST_FREERTOS\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TEST_FREERTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: TEST_FREERTOS.elf
  

@@ -91,9 +91,6 @@
 
 #define configCHECK_FOR_STACK_OVERFLOW  2
 
-  void MyTaskSwitchedIn(void);
-  void MyTaskSwitchedOut(void);
-
 #define traceTASK_SWITCHED_IN()   MyTaskSwitchedIn()
 #define traceTASK_SWITCHED_OUT()  MyTaskSwitchedOut()
 
