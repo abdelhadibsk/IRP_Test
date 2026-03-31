@@ -102,7 +102,7 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-	//DBG_PRINT("hi\n\r");
+	DBG_PRINT("hi\n\r");
 
   /* USER CODE END 2 */
 
@@ -126,13 +126,13 @@ int main(void)
                  pdMS_TO_TICKS( 400 ),
                  pdMS_TO_TICKS( 200 ),
                  &tB );
-
+  /*
   xRTTaskCreate( periodic_task, "C", 1024, NULL,
                      pdMS_TO_TICKS( 1000 ),
                      pdMS_TO_TICKS( 1000 ),
                      pdMS_TO_TICKS( 600  ),
                      &tC );
-
+*/
       /* Print registered task info using helper API */
   DBG_PRINT( "Tasks created and registered:\n\r" );
   for( UBaseType_t i = 0; i < uxRTGetTaskCount(); i++ )

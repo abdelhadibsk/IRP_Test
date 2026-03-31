@@ -102,7 +102,7 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-	//DBG_PRINT("hi\n\r");
+	DBG_PRINT("hi");
 
   /* USER CODE END 2 */
 
@@ -126,19 +126,19 @@ int main(void)
                  pdMS_TO_TICKS( 400 ),
                  pdMS_TO_TICKS( 200 ),
                  &tB );
-
+  /*
   xRTTaskCreate( periodic_task, "C", 1024, NULL,
                      pdMS_TO_TICKS( 1000 ),
                      pdMS_TO_TICKS( 1000 ),
                      pdMS_TO_TICKS( 600  ),
                      &tC );
-
+*/
       /* Print registered task info using helper API */
-  DBG_PRINT( "Tasks created and registered:\n\r" );
+  DBG_PRINT( "Tasks created and registered:\n" );
   for( UBaseType_t i = 0; i < uxRTGetTaskCount(); i++ )
   {
 	  TaskHandle_t h = xRTGetTaskByIndex( i );
-	  DBG_PRINT( "  Task %s: period=%lu  deadline=%lu  execution_time=%lu\n\r",
+	  DBG_PRINT( "  Task %s: period=%lu  deadline=%lu  execution_time=%lu\n",
       pcTaskGetName( h ),
       ( unsigned long ) xRTGetTaskPeriod( h ),
       ( unsigned long ) xRTGetTaskDeadline( h ),
@@ -147,19 +147,19 @@ int main(void)
 
       /* Active policy shown at startup */
 	#if   ( configUSE_RM   == 1 )
-  DBG_PRINT( "Policy: Rate Monotonic (RM)\n\r" );
+  DBG_PRINT( "Policy: Rate Monotonic (RM)\n" );
 	#elif ( configUSE_DM   == 1 )
-  DBG_PRINT( "Policy: Deadline Monotonic (DM)\n\r" );
+  DBG_PRINT( "Policy: Deadline Monotonic (DM)\n" );
 	#elif ( configUSE_FIFO == 1 )
-  DBG_PRINT( "Policy: FIFO\n\r" );
+  DBG_PRINT( "Policy: FIFO\n" );
 	#elif ( configUSE_EDF  == 1 )
-  DBG_PRINT( "Policy: Earliest Deadline First (EDF)\n\r" );
+  DBG_PRINT( "Policy: Earliest Deadline First (EDF)\n" );
   #endif
 
   //fflush( stdout );
   HAL_SuspendTick();
 
-  DBG_PRINT( "Starting scheduler\n\r" );
+  DBG_PRINT( "Starting scheduler\n" );
   vTaskStartScheduler();
   DBG_PRINT("5 - ERROR: scheduler returned!\r\n");
 
@@ -256,7 +256,7 @@ void periodic_task( void *pvParameters )
         TickType_t   elapsed = 0;
         TickType_t   slice_start;
 
-        DBG_PRINT( "[START] %s  tick=%lu  execution_time = %lu\n\r",
+        DBG_PRINT( "[START] %s  tick=%lu  execution_time = %lu\n",
                 pcTaskGetName( self ),
                 ( unsigned long ) xTaskGetTickCount(),
                 ( unsigned long ) execution_time );
@@ -277,7 +277,7 @@ void periodic_task( void *pvParameters )
         }
 
         TickType_t finish = xTaskGetTickCount();
-        DBG_PRINT( "[END  ] %s  tick=%lu  exec=%lu\n\r",
+        DBG_PRINT( "[END  ] %s  tick=%lu  exec=%lu\n",
                 pcTaskGetName( self ),
                 ( unsigned long ) finish,
                 ( unsigned long ) elapsed );
@@ -319,9 +319,9 @@ void MyTaskSwitchedIn( void )
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
         }
 
-    DBG_PRINT( "[IN ] %s at %lu\n\r",
-          pcTaskGetName( h ),
-          ( unsigned long ) xTaskGetTickCount() );
+    //DBG_PRINT( "[IN ] %s at %lu\n",
+    //      pcTaskGetName( h ),
+    //      ( unsigned long ) xTaskGetTickCount() );
 
 }
 
@@ -337,9 +337,9 @@ void MyTaskSwitchedOut( void )
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
         }
 
-    DBG_PRINT( "[OUT] %s at %lu\n\r",
-           pcTaskGetName( h ),
-          ( unsigned long ) xTaskGetTickCount() );
+    //DBG_PRINT( "[OUT] %s at %lu\n",
+    //       pcTaskGetName( h ),
+    //      ( unsigned long ) xTaskGetTickCount() );
 }
 
 /* =========================================================

@@ -2043,7 +2043,7 @@ BaseType_t xReturn;
 		}
 		else
 		{
-	        //DBG_RAW("idle task FAILED\r\n");
+	        DBG_RAW("idle task FAILED\r\n");
 			xReturn = pdFAIL;
 		}
 	}
@@ -2089,7 +2089,7 @@ BaseType_t xReturn;
 		so interrupts will automatically get re-enabled when the first task
 		starts to run. */
 		portDISABLE_INTERRUPTS();
-		//DBG_RAW("A\r\n");  // add this
+		DBG_RAW("A\r\n");  // add this
 
 
 		#if ( configUSE_NEWLIB_REENTRANT == 1 )
@@ -2105,7 +2105,7 @@ BaseType_t xReturn;
 		xNextTaskUnblockTime = portMAX_DELAY;
 		xSchedulerRunning = pdTRUE;
 		xTickCount = ( TickType_t ) configINITIAL_TICK_COUNT;
-		//DBG_RAW("B\r\n");  // add this
+		DBG_RAW("B\r\n");  // add this
 
 
 		/* If configGENERATE_RUN_TIME_STATS is defined then the following
@@ -2115,14 +2115,14 @@ BaseType_t xReturn;
 		have portCONFIGURE_TIMER_FOR_RUN_TIME_STATS() defined in your
 		FreeRTOSConfig.h file. */
 		portCONFIGURE_TIMER_FOR_RUN_TIME_STATS();
-		//DBG_RAW("C\r\n");  // add this
+		DBG_RAW("C\r\n");  // add this
 
 
 		//traceTASK_SWITCHED_IN();
 
 		/* Setting up the timer tick is hardware specific and thus in the
 		portable interface. */
-		//DBG_RAW("about to call xPortStartScheduler\r\n");
+		DBG_RAW("about to call xPortStartScheduler\r\n");
 
 		if( xPortStartScheduler() != pdFALSE )
 		{
