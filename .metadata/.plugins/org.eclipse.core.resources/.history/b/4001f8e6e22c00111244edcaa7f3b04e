@@ -130,7 +130,7 @@ int main(void)
   xRTTaskCreate( periodic_task, "C", 1024, NULL,
                      pdMS_TO_TICKS( 1000 ),
                      pdMS_TO_TICKS( 1000 ),
-                     pdMS_TO_TICKS( 600  ),
+                     pdMS_TO_TICKS( 100  ),
                      &tC );
 
       /* Print registered task info using helper API */
@@ -317,7 +317,7 @@ void MyTaskSwitchedIn( void )
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_SET);
         } else if (pcTaskGetName(h)[0] == 'B') {
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
-        } else if (pcTaskGetName(h)[0] == 'C') {
+        }   else if (pcTaskGetName(h)[0] == 'C') {
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
         }
 
@@ -337,7 +337,7 @@ void MyTaskSwitchedOut( void )
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_RESET);
         } else if (pcTaskGetName(h)[0] == 'B') {
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
-        } else if (pcTaskGetName(h)[0] == 'C') {
+        }	else if (pcTaskGetName(h)[0] == 'C') {
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
         }
 

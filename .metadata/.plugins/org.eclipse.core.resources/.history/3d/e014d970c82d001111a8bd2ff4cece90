@@ -317,8 +317,6 @@ void MyTaskSwitchedIn( void )
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_SET);
         } else if (pcTaskGetName(h)[0] == 'B') {
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_SET);
-        } else if (pcTaskGetName(h)[0] == 'C') {
-            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
         }
 
     DBG_PRINT( "[IN ] %s at %lu\n\r",
@@ -337,8 +335,6 @@ void MyTaskSwitchedOut( void )
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_RESET);
         } else if (pcTaskGetName(h)[0] == 'B') {
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, GPIO_PIN_RESET);
-        } else if (pcTaskGetName(h)[0] == 'C') {
-            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
         }
 
     DBG_PRINT( "[OUT] %s at %lu\n\r",
