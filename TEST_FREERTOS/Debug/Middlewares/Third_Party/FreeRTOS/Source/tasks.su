@@ -69,3 +69,4 @@
 ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:5482:12:xRTGetNextRelease	16	static
 ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:5492:6:vRTJobRelease	24	static
 ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:5506:6:vApplicationRTTaskRegister	176	static,ignoring_inline_asm
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:5538:6:prvSetTaskPriorityNoYield	160	static,ignoring_inline_asm

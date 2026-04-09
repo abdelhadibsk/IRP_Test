@@ -102,8 +102,6 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-	//DBG_PRINT("hi\n\r");
-
   /* USER CODE END 2 */
 
   /* Start scheduler */
@@ -116,22 +114,24 @@ int main(void)
        * No need to pass parameters to the task function —
        * everything is stored inside the TCB via xRTTaskCreate. */
   xRTTaskCreate( periodic_task, "A", 1024, NULL,
-                 pdMS_TO_TICKS( 500 ),   /* period   */
-                 pdMS_TO_TICKS( 500 ),   /* deadline */
-                 pdMS_TO_TICKS( 80  ),   /* execution time */
+                 pdMS_TO_TICKS( 700 ),   /* period   */
+                 pdMS_TO_TICKS( 700 ),   /* deadline */
+                 pdMS_TO_TICKS( 300  ),   /* execution time */
                  &tA );
 
   xRTTaskCreate( periodic_task, "B", 1024, NULL,
-                 pdMS_TO_TICKS( 400 ),
-                 pdMS_TO_TICKS( 400 ),
-                 pdMS_TO_TICKS( 200 ),
+                 pdMS_TO_TICKS( 2000 ),
+                 pdMS_TO_TICKS( 2000 ),
+                 pdMS_TO_TICKS( 800 ),
                  &tB );
 
-  xRTTaskCreate( periodic_task, "C", 1024, NULL,
+
+/*  xRTTaskCreate( periodic_task, "C", 1024, NULL,
                      pdMS_TO_TICKS( 1000 ),
                      pdMS_TO_TICKS( 1000 ),
                      pdMS_TO_TICKS( 600  ),
                      &tC );
+*/
 
       /* Print registered task info using helper API */
   DBG_PRINT( "Tasks created and registered:\n\r" );
@@ -256,10 +256,6 @@ void periodic_task( void *pvParameters )
         TickType_t   elapsed = 0;
         TickType_t   slice_start;
 
-        DBG_PRINT( "[START] %s  tick=%lu  execution_time = %lu\n\r",
-                pcTaskGetName( self ),
-                ( unsigned long ) xTaskGetTickCount(),
-                ( unsigned long ) execution_time );
 
         /* Exécute par tranches — accumule seulement le temps CPU réel.
          * Si préemptée entre deux tranches, le temps perdu n'est pas compté. */
@@ -268,7 +264,7 @@ void periodic_task( void *pvParameters )
             slice_start = xTaskGetTickCount();
 
             /* Tranche de travail — 1 tick à la fois */
-            while( xTaskGetTickCount() == slice_start )
+            while( xTaskGetTickCount() < (slice_start + 1) )
             {
                 /* busy work pendant exactement 1 tick */
             }
@@ -276,11 +272,6 @@ void periodic_task( void *pvParameters )
             elapsed++;   /* 1 tick CPU consommé */
         }
 
-        TickType_t finish = xTaskGetTickCount();
-        DBG_PRINT( "[END  ] %s  tick=%lu  exec=%lu\n\r",
-                pcTaskGetName( self ),
-                ( unsigned long ) finish,
-                ( unsigned long ) elapsed );
 
         vTaskSuspend( NULL );
     }

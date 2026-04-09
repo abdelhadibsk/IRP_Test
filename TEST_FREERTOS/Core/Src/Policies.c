@@ -33,19 +33,15 @@
  * ========================================================= */
 static void prvApplyRanks( UBaseType_t * ranks, UBaseType_t n )
 {
-    UBaseType_t i;
-
-    for( i = 0; i < n; i++ )
+        for( UBaseType_t i = 0; i < n; i++ )
     {
         TaskHandle_t xTask = xRTGetTaskByIndex( i );
-        UBaseType_t  uxPriority = ( configMAX_PRIORITIES - 2U ) - ranks[ i ];
-        // Invert rank to get FreeRTOS priority (0 = lowest in FreeRTOS)
+        UBaseType_t  uxNew = ( configMAX_PRIORITIES - 2U ) - ranks[ i ];
 
-        /* Safety clamp */
-        if( uxPriority < ( tskIDLE_PRIORITY + 1U ) )
-            uxPriority = tskIDLE_PRIORITY + 1U;
-
-        vRTSetTaskPriority( xTask, uxPriority );
+        if( uxNew < tskIDLE_PRIORITY + 1U )
+            uxNew = tskIDLE_PRIORITY + 1U;
+        // vpriorityset
+        prvSetTaskPriorityNoYield( xTask, uxNew );  // ← jamais de yield
     }
 }
 

@@ -69,3 +69,4 @@
 ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:5482:12:xRTGetNextRelease	1
 ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:5492:6:vRTJobRelease	1
 ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:5506:6:vApplicationRTTaskRegister	3
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:5538:6:prvSetTaskPriorityNoYield	9
